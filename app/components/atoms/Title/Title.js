@@ -1,16 +1,11 @@
 // @flow
 import React from 'react';
-import type { Node } from 'react';
 import styles from './Title.style';
 import withStyles from '../../../lib/withStyles';
 
-type Props = {
-  children: Node,
-  className: string,
-  inheritedStyles?: string,
-};
 
-const Title = ({ children, className, inheritedStyles, ...others }: Props): Node => (
+
+const Title = ({ children, className, inheritedStyles, ...others }) => (
   <h1 className={className} {...others}>
     {children}
   </h1>

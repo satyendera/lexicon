@@ -1,7 +1,5 @@
 // @flow
 import React from 'react';
-import  { Node } from 'react';
-
 import {
   AnchorVanilla as Anchor,
   ImageVanilla as Image,
@@ -142,8 +140,8 @@ const HomePage = ({ editorialData }) => {
   return (
     <Layout title="home" className="row" id="content-wrapper">
       <HeadTag
-        description="Universal React - accelerator for server side rendered react applications"
-        title="Universal React"
+        description="Next JS BoilerPlate - accelerator for server side rendered react applications"
+        title="Lexicon Code Challenge"
       />
       <TopBanner title="Universal React" subTitle={subTitle} tickerPoints={tickerPoints} />
       <section className="main-wrapper">
