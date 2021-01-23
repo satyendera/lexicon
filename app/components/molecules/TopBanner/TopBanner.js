@@ -8,9 +8,9 @@
 import React, { PureComponent } from 'react';
 import styles from './TopBanner.style';
 import withStyles from '../../../lib/withStyles';
-import type { Props } from './types';
 
-class TopBanner extends PureComponent<Props> {
+
+class TopBanner extends PureComponent {
   typingSpeed = 80;
 
   deletingSpeed = 30;
@@ -23,9 +23,9 @@ class TopBanner extends PureComponent<Props> {
 
   INTERVAL_VAL = undefined;
 
-  ELEMENT: HTMLElement;
+  ELEMENT;
 
-  points: Array<string> = [];
+  points = [];
 
   componentDidMount() {
     const { tickerPoints } = this.props;

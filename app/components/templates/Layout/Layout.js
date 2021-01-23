@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import type { Node } from 'react';
+import  { Node } from 'react';
 import { connect } from 'react-redux';
 import Head from 'next/head';
 import get from 'lodash/get';
@@ -13,13 +13,9 @@ import { DESKTOP } from '../../../constants';
 import API from '../../../utils/fetch';
 import Experience from '../../../containers/organisms/Experience';
 
-type Props = {
-  children: Node,
-  deviceType: string,
-  hasRightGutter?: boolean,
-};
 
-const Layout = ({ children, deviceType, hasRightGutter }: Props): Node => {
+
+const Layout = ({ children, deviceType, hasRightGutter }) => {
   // `deviceType` is now accessible to all component styles using `props.theme.deviceType`
   Theme.deviceType = deviceType || DESKTOP;
   /**
@@ -54,7 +50,7 @@ Layout.defaultProps = {
 /* istanbul ignore next */
 const mapDispatchToProps = () => ({});
 
-const mapStateToProps /* istanbul ignore next */ = (state: Object): { deviceType: string } => ({
+const mapStateToProps /* istanbul ignore next */ = state =>  ({
   deviceType: get(state, ['global', 'globalData', 'deviceType', '']),
   isNavigationDrawerOpen: get(state, ['global', 'header', 'isNavigationDrawerOpen', '']),
   topBanner: get(state, ['global', 'header', 'topBanner', '']),

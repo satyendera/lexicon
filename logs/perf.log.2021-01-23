@@ -1,3 +1,8 @@
 2021-01-22T23:33:29.198Z [undefined] [31merror[39m [DEFAULT_PREFIX|WKMIN2419477]  [default]: [PERFLOG] [SERVICE]  Status: undefined Method: GET URL: https://challenge.lexicondigital.com.au/b/5dd3a1fc2e22356f234e2057?device=desktop Elapsed Time: 5ms
 2021-01-22T23:33:29.200Z [undefined] [31merror[39m [DEFAULT_PREFIX|WKMIN2419477]  [default]: [PERFLOG] [SERVICE]  Status: undefined Method: GET URL: https://challenge.lexicondigital.com.au/b/5dd39df33da40e6f298c11ef/4?device=desktop Elapsed Time: 7ms
 2021-01-22T23:33:29.224Z [undefined] [31merror[39m [DEFAULT_PREFIX|WKMIN2419477]  [default]: [PERFLOG] [PAGE] Method: GET URL: / Elapsed Time: 5273ms
+2021-01-23T03:43:04.033Z [undefined] [31merror[39m [DEFAULT_PREFIX|WKMIN2419477]  [default]: [PERFLOG] [PAGE] Method: GET URL: / Elapsed Time: 159ms
+2021-01-23T03:44:24.301Z [undefined] [31merror[39m [DEFAULT_PREFIX|WKMIN2419477]  [default]: [PERFLOG] [PAGE] Method: GET URL: / Elapsed Time: 179ms
+2021-01-23T03:45:14.049Z [undefined] [31merror[39m [DEFAULT_PREFIX|WKMIN2419477]  [default]: [PERFLOG] [PAGE] Method: GET URL: / Elapsed Time: 182ms
+2021-01-23T03:46:35.306Z [undefined] [31merror[39m [DEFAULT_PREFIX|WKMIN2419477]  [default]: [PERFLOG] [PAGE] Method: GET URL: / Elapsed Time: 2455ms
+2021-01-23T03:52:31.594Z [undefined] [31merror[39m [DEFAULT_PREFIX|WKMIN2419477]  [default]: [PERFLOG] [PAGE] Method: GET URL: / Elapsed Time: 2627ms

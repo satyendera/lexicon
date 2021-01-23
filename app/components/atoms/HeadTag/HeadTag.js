@@ -2,9 +2,9 @@
 import Head from 'next/head';
 import React, { PureComponent } from 'react';
 import config from './HeadTag.config';
-import type { Props, MetaProps } from './types';
 
-export const MetaTag = (props: MetaProps) => {
+
+export const MetaTag = (props) => {
   const attrs = {
     content: { ...props }.content,
   };
@@ -19,7 +19,7 @@ export const MetaTag = (props: MetaProps) => {
   return <meta {...attrs} />;
 };
 
-class HeadTag extends PureComponent<Props> {
+class HeadTag extends PureComponent {
   render() {
     const { title, schema } = this.props;
     const { META_KEYS, LINK } = config;

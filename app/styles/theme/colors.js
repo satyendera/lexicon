@@ -1,6 +1,6 @@
 // @flow
 
-type colors = { [key: string]: string };
+
 
 // Region Colors
 export default ({
@@ -54,4 +54,4 @@ export default ({
   PROMO_RED: '#c44f4f',
   HEADER_SHADOW_GREY: 'rgba(145,145,145,0.4)',
   DISABLE_COLOR: '#cfcfcf',
-}: colors);
+});

@@ -1,5 +1,5 @@
 // @flow
-import type { TrackerObject, ActionType } from './types';
+
 import { trackActions } from './helpers/trackerEvents';
 
 /**
@@ -8,8 +8,8 @@ import { trackActions } from './helpers/trackerEvents';
  * and use the action type as the event type and the action payload as the event data
  * @param {Object} tracker
  */
-export const trackingMiddleware = (tracker: TrackerObject) => () => (next: any) => (
-  action: ActionType
+export const trackingMiddleware = (tracker) => () => (next) => (
+  action
 ) => {
   if (tracker && tracker.instance) {
     const { actions } = tracker;

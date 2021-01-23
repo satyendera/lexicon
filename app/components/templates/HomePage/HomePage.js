@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import type { Node } from 'react';
+import  { Node } from 'react';
 
 import {
   AnchorVanilla as Anchor,
@@ -12,13 +12,13 @@ import {
 import Layout from '../Layout';
 import HeadTag from '../../atoms/HeadTag';
 import TopBanner from '../../molecules/TopBanner';
-import type { Props } from './types';
+
 import withStyles from '../../../lib/withStyles';
 import styles from './HomePage.style';
 import ArticleWrap from '../../molecules/ArticleWrap';
 // import reactLogo from '/static/images/logo/react.jpg';
 
-const HomePage = ({ editorialData }: Props): Node => {
+const HomePage = ({ editorialData }) => {
   const { title, subTitle } = editorialData;
   const tickerPoints = [
     'Universal Rendering',

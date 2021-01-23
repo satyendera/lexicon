@@ -16,15 +16,15 @@ const logger = loggerFactory.getLogger();
 es6promise.polyfill();
 
 class ServiceUtils {
-  currentDevice: string;
+  currentDevice;
 
-  environment: string;
+  environment;
 
-  clientPathPrefix: string;
+  clientPathPrefix;
 
-  serverPathPrefix: string;
+  serverPathPrefix;
 
-  envApiKey: string;
+  envApiKey;
 
   constructor() {
     this.envApiKey = process.env.ENV_API_KEY || '';
@@ -48,16 +48,16 @@ class ServiceUtils {
     }
   }
 
-  setDeviceType(device: string): void {
+  setDeviceType(device) {
     this.currentDevice = device;
   }
 
-  getServerPathPrefix(): string {
+  getServerPathPrefix() {
     return this.serverPathPrefix;
   }
 
-  static appendParams(url: string, requestData?: Object): string {
-    let appendedURL: string = url;
+  static appendParams(url, requestData) {
+    let appendedURL = url;
     if (requestData) {
       if (url.indexOf('?') < 0) appendedURL = url.concat('?');
       appendedURL = appendedURL.concat(`device=${requestData.deviceType}`);
@@ -66,9 +66,9 @@ class ServiceUtils {
   }
 
   /* eslint-disable */
-  fetch = async (url: string, actionObject?: Object, additionalFetchOptions?: Object) => {
+  fetch = async (url, actionObject, additionalFetchOptions) => {
     let headers = {};
-    let fetchUrl: string;
+    let fetchUrl;
     const start = Date.now();
     let perfLogger;
     let response = {};

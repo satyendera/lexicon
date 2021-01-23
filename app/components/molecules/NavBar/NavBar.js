@@ -2,15 +2,15 @@
 
 // @flow
 import React from 'react';
-import type { Node } from 'react';
+
 import { AnchorVanilla as Anchor } from '@xt-pagesource/atomic-react-pattern-lib';
 import Link from 'next/link';
 import styles from './NavBar.style';
 import withStyles from '../../../lib/withStyles';
-import type { Props } from './types';
+
 import { isApplicationLink } from '../../../utils/isApplicationLink';
 
-const NavBar = ({ className, items, children }: Props): Node => (
+const NavBar = ({ className, items, children }) => (
   <nav className={className}>
     {children || (
       <ul>

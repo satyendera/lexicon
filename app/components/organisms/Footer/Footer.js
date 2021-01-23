@@ -5,13 +5,13 @@
  */
 // @flow
 import React from 'react';
-import type { Node } from 'react';
-import type { Props } from './types';
+
+
 import withStyles from '../../../lib/withStyles';
 import NavBar from '../../molecules/NavBar';
 import styles from './Footer.style';
 
-const Footer = ({ className, nav }: Props): Node => (
+const Footer = ({ className, nav }) => (
   <footer className={className} id="footer">
     <div className="inner">
       <div className="footer-links">

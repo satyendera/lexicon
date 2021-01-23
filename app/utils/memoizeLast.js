@@ -1,12 +1,12 @@
 // @flow
 
-const eqArray = (left: Array<mixed>, right: Array<mixed>): boolean =>
+const eqArray = (left, right) =>
   left.length === right.length && left.every((value, index) => right[index] === value);
 
-const memoizeLast = (fn: Function) => {
+const memoizeLast = (fn) => {
   let lastMemoized;
 
-  const memoizedFn = (...args: any[]) => {
+  const memoizedFn = (...args) => {
     if (lastMemoized && eqArray(lastMemoized.args, args)) {
       return lastMemoized.answer;
     }

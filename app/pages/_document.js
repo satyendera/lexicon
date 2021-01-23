@@ -11,7 +11,7 @@ import cssIncludes from '../styles/cssIncludes';
 import { MOBILE, DESKTOP } from '../constants';
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx: any) {
+  static async getInitialProps(ctx) {
     const { device = {} } = ctx.req || {};
     const deviceType = device.type === DESKTOP ? DESKTOP : MOBILE;
     const sheet = new ServerStyleSheet();

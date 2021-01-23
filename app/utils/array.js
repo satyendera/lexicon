@@ -1,6 +1,6 @@
 // @flow
 // eslint-disable-next-line import/prefer-default-export
-export const isArraysEqualShallow = (array: any, other: any): boolean => {
+export const isArraysEqualShallow = (array, other) => {
   if (array === other) {
     return true;
   }

@@ -17,7 +17,8 @@ const envVars = dotenv.config({
     `..${path.sep}..${path.sep}env${path.sep}${process.env.NODE_ENV || ENV_DEVELOPMENT}.env`
   ),
 }).parsed;
-const metricsKey = envVars.ENV_API_KEY === envVars.PROD_KEY ? 'prod' : 'dev';
+console.log('envVars nextConfig-------',envVars)
+const metricsKey = process.env.ENV_API_KEY === process.env.PROD_KEY ? 'prod' : 'dev';
 
 module.exports = withPlugins([withBundleAnalyzer, withOffline], {
   distDir: '../.next',

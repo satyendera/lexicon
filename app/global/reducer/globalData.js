@@ -17,14 +17,7 @@ import {
   PAGE_ORIGIN,
   GET_APPLICATION_LABELS_SUCCESS,
 } from '../constants';
-import type {
-  DeviceTypeAction,
-  GlobalActions,
-  ActiveRegionAction,
-  ConfigKeyAction,
-  RouteAction,
-  setIsTabletAction,
-} from '../types';
+
 import { setCookie } from '../../utils/utils';
 
 export const initState = {
@@ -32,23 +25,23 @@ export const initState = {
   activeRegion: '',
 };
 
-const setDevice = (state: Object, deviceType): DeviceTypeAction =>
+const setDevice = (state, deviceType) =>
   set(state, 'deviceType', deviceType);
 
-const setIsTablet = (state: Object, isTablet): setIsTabletAction =>
+const setIsTablet = (state, isTablet) =>
   set(state, 'isTablet', isTablet);
 
-const setConfigKeys = (state: Object, configKeys): ConfigKeyAction =>
+const setConfigKeys = (state, configKeys) =>
   set(state, 'configKeys', configKeys);
 
-const setRegion = (state: Object, activeRegion): ActiveRegionAction =>
+const setRegion = (state, activeRegion) =>
   set(state, 'activeRegion', activeRegion);
 
-const setPageUrl = (state: Object, pageUrl): ActiveRegionAction => set(state, 'pageUrl', pageUrl);
+const setPageUrl = (state, pageUrl) => set(state, 'pageUrl', pageUrl);
 
-const setRoute = (state: Object, pathname): RouteAction => set(state, 'route', pathname);
+const setRoute = (state, pathname) => set(state, 'route', pathname);
 
-const setPageQuery = (state: Object, pageQuery) => set(state, 'pageQuery', pageQuery);
+const setPageQuery = (state, pageQuery) => set(state, 'pageQuery', pageQuery);
 
 const setAuthentication = (state, sessionInfo) => set(state, 'sessionInfo', sessionInfo);
 const setSessionEmail = state => {
@@ -66,7 +59,7 @@ const setPageOrigin = (state, origin) => set(state, 'pageOrigin', origin);
 const setApplicationLabels = (state, labels) => set(state, 'labels', labels);
 
 /* eslint-disable */
-export default (state: Object = initState, action: GlobalActions) => {
+export default (state = initState, action) => {
   switch (action.type) {
     case DEVICE_TYPE:
       return setDevice(state, get(action, 'deviceType'));

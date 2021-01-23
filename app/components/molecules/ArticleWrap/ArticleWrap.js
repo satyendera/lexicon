@@ -8,9 +8,9 @@
 import React, { PureComponent } from 'react';
 import styles from './ArticleWrap.style';
 import withStyles from '../../../lib/withStyles';
-import type { Props } from './types';
 
-class ArticleWrap extends PureComponent<Props> {
+
+class ArticleWrap extends PureComponent {
   render() {
     const { title, children, isLeft, subtitle } = this.props;
     let { className } = this.props;

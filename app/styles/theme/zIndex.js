@@ -1,8 +1,6 @@
 // @flow
 
-type zIndex = {
-  [key: string]: number | Object,
-};
+
 
 // z-index
 export default ({
@@ -16,4 +14,4 @@ export default ({
   zFilter: 100,
   zNativeTickSelectIcon: 50,
   zPlacesAutocomplete: 1100,
-}: zIndex);
+});
