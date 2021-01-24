@@ -9,8 +9,8 @@ import HeadTag from '../../atoms/HeadTag';
 import saga from './ErrorPage.saga';
 import reducer from './ErrorPage.reducer';
 
-class ErrorPage extends Component<any> {
-  static getInitialProps({ res }: any) {
+class ErrorPage extends Component {
+  static getInitialProps({ res }) {
     if (res && res.redirect) {
       res.status(404);
     }

@@ -6,6 +6,8 @@ import agent from '../../server/utils/proxyAgent';
 import loggerFactory from './logger';
 import { DESKTOP, ENV_DEVELOPMENT, RESPONSE_OK, RESPONSE_SERVER_ERROR } from '../constants';
 import { CACHEABLE_SERVICES_LIST } from './cacheableServices';
+import env from '../utils/env'
+
 
 const { publicRuntimeConfig } = getConfig();
 
@@ -91,7 +93,7 @@ class ServiceUtils {
       // Server-side call with proper action object from initial actions
       headers = {
         // Cookie: actionObject.requestDetails.cookies || '',
-        'secret-key': process.env.API_SECRET_KEY,
+        'x-api-key': env.API_SECRET_KEY,
         // ...actionObject.requestDetails.whitelistedHeaders,
       };
       perfLogger = actionObject.requestDetails.logger;

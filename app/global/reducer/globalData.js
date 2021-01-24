@@ -56,7 +56,7 @@ const setUserState = (state, userState) => {
 
 const setPageOrigin = (state, origin) => set(state, 'pageOrigin', origin);
 
-const setApplicationLabels = (state, labels) => set(state, 'labels', labels);
+const setApplicationLabels = (state, movies) => set(state, 'MoviesList', movies);
 
 /* eslint-disable */
 export default (state = initState, action) => {

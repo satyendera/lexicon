@@ -8,9 +8,9 @@
 import React, { PureComponent } from 'react';
 import styles from './FeatureBanner.style';
 import withStyles from '../../../lib/withStyles';
-import type { Props } from './types';
 
-class FeatureBanner extends PureComponent<Props> {
+
+class FeatureBanner extends PureComponent {
   render() {
     const { className, heading, subheading } = this.props;
     return (

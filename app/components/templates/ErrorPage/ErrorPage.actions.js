@@ -15,7 +15,7 @@ export const loadErrorPage = () => ({
   slotId: 'errorPageSlot',
 });
 
-export const loadErrorPageSuccess = (data: any) => ({
+export const loadErrorPageSuccess = (data) => ({
   type: LOAD_ERROR_PAGE_SUCCESS,
   data,
 });

@@ -6,7 +6,7 @@ import API from '../../../utils/fetch';
 
 export function* loadHomeEditorialDataSaga(action) {
   try {
-    const data = yield call(API.fetch, API_URLS.homePage, action);
+    const data = yield call(API.fetch, API_URLS.movieAPI, action);
     yield put(loadHomePageEditorialSuccess(data));
   } catch (err) {
     yield put(loadHomeFailure(err));

@@ -20,62 +20,7 @@ width:100%;
 margin:0 auto;
 `}
 `;
-export const MovieTileContainer = styled.article`
-  ${({ theme, isFluid, noMargin }) => css`
-    cursor: pointer;
-    position: relative;
-    background-color: transparent;
-   
-    .show-bottom-toggler {
-      height: 70px;
-    }
-    .hide-bottom-toggler {
-      height: 0;
-    }
-    .productTileAnchorStyle:hover {
-      color: inherit;
-    }
-    &.tileExpanded {
-      border: 1px solid black;
-    }
-    padding: 0px;
-    ${theme.breakpoints.up('sm')} {
-      ${!isFluid ? 'width: calc(33% - 10px);' : ''}
-      ${!noMargin
-        ? `margin-left: 0.25rem; margin-right: 0.25rem;`
-        : ''}
-      flex-shrink: 0;
-      height: inherit;
-    }
-    ${theme.breakpoints.up('lg')} {
-      padding: 0;
-      ${!isFluid ? `width: calc(25% - 50px);` : ''}
-      min-height: 420px;
-      &.tile-3 {
-        margin-right: 0;
-      }
-    }
-    @media print {
-      break-inside: avoid-page;
-    }
-    img{
-      ${theme.breakpoints.up('sm')} {
-        width: auto;
-      }
-      width: 185px;
-      padding:0;
-    }
-  `}
-`;
 
-export const MovieWrapper = styled.div`
-  display:flex;
-  margin:0 auto;
-  flex-direction: row;
-  
-  flex-flow:wrap;
-    
-`;
 export default css`
   
   padding: 70px 0;

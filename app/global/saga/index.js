@@ -6,7 +6,7 @@ import { serverActions } from '../actions';
 
 export function* getApplicationLabels(actions) {
   try {
-    const data = yield call(API.fetch, API_URLS.labels, actions);
+    const data = yield call(API.fetch, API_URLS.movieAPI, actions);
     yield put(serverActions.setApplicationLabels(data));
   } catch (err) {
     yield put(serverActions.setApplicationLabels({}));
