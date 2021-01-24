@@ -1,39 +1,25 @@
 // @flow
-import React from 'react';
-import Layout from '../Layout';
-import HeadTag from '../../atoms/HeadTag';
-import TopBanner from '../../molecules/TopBanner';
-import withStyles from '../../../lib/withStyles';
-import styles from './HomePage.style';
-import ArticleWrap from '../../../containers/molecules/ArticleWrap';
+import React from "react";
+import Layout from "../Layout";
+import HeadTag from "../../atoms/HeadTag";
+import TopBanner from "../../molecules/TopBanner";
+import withStyles from "../../../lib/withStyles";
+import styles from "./HomePage.style";
+import ArticleWrap from "../../../containers/molecules/ArticleWrap";
 // import reactLogo from '/static/images/logo/react.jpg';
 
 const HomePage = ({ editorialData }) => {
   const { Provider } = editorialData;
- 
-
-  
 
   return (
-   
-    <Layout title="home" className="row" id="content-wrapper" >
+    <Layout title="home" className="row" id="content-wrapper">
       <HeadTag
         description="Next JS BoilerPlate - accelerator for server side rendered react applications"
         title="Lexicon Code Challenge"
       />
-      <TopBanner title="Universal React" subTitle={Provider}  />
+      <TopBanner title="Prince's Theatre" subTitle={Provider} />
       <section className="main-wrapper">
-
-      <ArticleWrap title={Provider}  className="tech-dependency">
-         
-        </ArticleWrap>
-       
-
-
-       
-       
-       
-        
+        <ArticleWrap title={Provider} className="tech-dependency"></ArticleWrap>
       </section>
     </Layout>
   );
@@ -41,8 +27,8 @@ const HomePage = ({ editorialData }) => {
 
 HomePage.defaultProps = {
   seoData: {
-    description: 'Home Page Description',
-    title: 'Home page',
+    description: "Home Page Description",
+    title: "Home page",
   },
   editorialData: {},
 };

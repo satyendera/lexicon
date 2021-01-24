@@ -14,7 +14,7 @@ export const movieReducer = (state = initialState, { type, identifier, data, err
     case GET_MOVIE:
       return set(state, 'isFetching', true);
     case GET_MOVIE_SUCCESS:
-      return set(state, `${identifier}.data`, data);
+      return set(state, `MovieData`, identifier);
     case GET_MOVIE_FAILURE:
       return set(state, `${identifier}.error`, error);
     default:

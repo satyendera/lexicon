@@ -6,14 +6,11 @@
 
 // @flow
 import React from "react";
-
-import styles, {
-  MovieTileContainer,
-  MovieWrapper,
-  MainContainer,
-} from "./ArticleWrap.style";
+import { useRouter } from "next/router";
+import styles, { MovieWrapper, MainContainer } from "./ArticleWrap.style";
 import withStyles from "../../../lib/withStyles";
 import NotFound from "../NotFound";
+import MovieTile from "../../atoms/MovieTile";
 
 const ArticleWrap = ({
   title,
@@ -24,9 +21,11 @@ const ArticleWrap = ({
   getMovie,
 }) => {
   const { Movies } = CinemaWorldData;
+  const router = useRouter();
   const getClickedMovie = (event, movieId) => {
     event.preventDefault();
     getMovie(movieId);
+    router.push("/experience");
   };
   return (
     <MainContainer>
@@ -34,15 +33,10 @@ const ArticleWrap = ({
         <MovieWrapper>
           {Movies ? (
             Movies.map((movie, count) => (
-              <MovieTileContainer
-                onClick={(event) => getClickedMovie(event, movie.ID)}
-              >
-                <img
-                  className={className}
-                  alt={movie.Title}
-                  src={movie.Poster}
-                />{" "}
-              </MovieTileContainer>
+              <MovieTile
+                movie={movie}
+                getClickedMovie={getClickedMovie}
+              ></MovieTile>
             ))
           ) : (
             <NotFound></NotFound>

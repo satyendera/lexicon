@@ -29,6 +29,7 @@ import { DESKTOP, MOBILE, PHONE, API_ERROR_HANDLER_PAGE, TABLET } from '../../co
 import globalActions, { serverActions, pageActions } from '../../global/actions';
 
 import { globalDataStructure } from '../../global/reducer';
+
 import injectSagaAndReducer from './injectSagaAndReducer';
 import { parseQueryParams } from '../../utils/utils';
 

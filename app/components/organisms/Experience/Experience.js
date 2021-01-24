@@ -1,44 +1,35 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
-import React, { useEffect, useState } from 'react';
-import Layout from '../../templates/Layout';
-import API from '../../../utils/fetch';
-import API_URLS from '../../../constants/api/services';
-import experienceComponentMap from '../../../utils/componentMap';
-import TopBanner from '../../molecules/TopBanner';
+import React from "react";
+import { useRouter } from "next/router";
+import Button from "@material-ui/core/Button";
+import Layout from "../../templates/Layout";
+import TopBanner from "../../molecules/TopBanner";
+import MovieTile from "../../atoms/MovieTile";
+import { MainContainer } from "../../molecules/ArticleWrap/ArticleWrap.style";
 
-const Experience = ({ identifier = 'home' }) => {
-  const [isFetching, updateIsFetching] = useState(false);
-  const [components, updateComponentMap] = useState(false);
+const Experience = ({ identifier = "home", moviesData }) => {
+  const router = useRouter();
 
-  useEffect(() => {
-    (async () => {
-      updateIsFetching(true);
-      const result = await API.fetch(API_URLS.experience, null, {
-        params: {
-          identifier,
-        },
-      });
-      updateIsFetching(false);
-      if (!isFetching) updateComponentMap(result.data);
-    })();
-  }, []);
-
-  const getElements = () => {
-    return !isFetching && Array.isArray(components)
-      ? components.map((component, index) =>
-          React.createElement(experienceComponentMap[component.id], {
-            key: `${component.id}${index}`,
-            ...component.props,
-          })
-        )
-      : null;
+  const goBack = (event) => {
+    event.preventDefault();
+    router.push("/");
   };
 
   return (
     <Layout title="error" className="row" id="content-wrapper" tabindex="-1">
-      <TopBanner title="Universal React" subTitle="movieDetails"  />
-      {getElements()}
+      <TopBanner title="PRINCE'S THEATRE" subTitle="Cinema World" />
+      <MainContainer>
+        <Button
+          variant="contained"
+          color="primary"
+          component="span"
+          onClick={(event) => goBack(event)}
+        >
+          Back
+        </Button>
+        <MovieTile movie={moviesData?.MovieData} />
+      </MainContainer>
     </Layout>
   );
 };

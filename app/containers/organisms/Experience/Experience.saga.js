@@ -7,7 +7,7 @@ import API from '../../../utils/fetch';
 export function* loadExperienceSaga(action) {
   console.log('TCL: function*loadExperienceSaga -> action', action);
   try {
-    const data = yield call(API.fetch, API_URLS.experience, action, {
+    const data = yield call(API.fetch, API_URLS.movieAPI, action, {
       params: {
         identifier: action.identifier,
       },
