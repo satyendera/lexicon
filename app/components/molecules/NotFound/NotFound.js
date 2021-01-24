@@ -17,7 +17,7 @@ class NotFound extends PureComponent {
   render() {
     return (
       <MainContainer>
-      <img src="/static/images/logo/next.png" alt="not Found"/>
+      <img src="/static/images/comingSoon.jpeg" alt="not Found"/>
     </MainContainer>
     );
   }

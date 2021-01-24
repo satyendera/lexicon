@@ -5,11 +5,11 @@ import HeadTag from '../../atoms/HeadTag';
 import TopBanner from '../../molecules/TopBanner';
 import withStyles from '../../../lib/withStyles';
 import styles from './HomePage.style';
-import ArticleWrap from '../../molecules/ArticleWrap';
+import ArticleWrap from '../../../containers/molecules/ArticleWrap';
 // import reactLogo from '/static/images/logo/react.jpg';
 
 const HomePage = ({ editorialData }) => {
-  const { Provider, Movies } = editorialData;
+  const { Provider } = editorialData;
  
 
   
@@ -24,7 +24,7 @@ const HomePage = ({ editorialData }) => {
       <TopBanner title="Universal React" subTitle={Provider}  />
       <section className="main-wrapper">
 
-      <ArticleWrap title={Provider} Movies={Movies} className="tech-dependency">
+      <ArticleWrap title={Provider}  className="tech-dependency">
          
         </ArticleWrap>
        

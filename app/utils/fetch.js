@@ -17,6 +17,7 @@ const logger = loggerFactory.getLogger();
 
 es6promise.polyfill();
 
+
 class ServiceUtils {
   currentDevice;
 
@@ -31,8 +32,8 @@ class ServiceUtils {
   constructor() {
     this.envApiKey = process.env.ENV_API_KEY || '';
     this.environment = process.env.NODE_ENV || ENV_DEVELOPMENT;
-    this.clientPathPrefix = process.env.API_PROXY_PATH || '';
-    this.serverPathPrefix = process.env.API_DOMAIN || '';
+    this.clientPathPrefix = env.API_PROXY_PATH || 'https://challenge.lexicondigital.com.au';
+    this.serverPathPrefix = env.API_DOMAIN || 'https://challenge.lexicondigital.com.au';
     this.currentDevice = DESKTOP;
 
     /**
@@ -91,11 +92,7 @@ class ServiceUtils {
       );
     } else {
       // Server-side call with proper action object from initial actions
-      headers = {
-        // Cookie: actionObject.requestDetails.cookies || '',
-        'x-api-key': env.API_SECRET_KEY,
-        // ...actionObject.requestDetails.whitelistedHeaders,
-      };
+      
       perfLogger = actionObject.requestDetails.logger;
       fetchUrl = ServiceUtils.appendParams(
         `${this.serverPathPrefix}${url}`,
@@ -117,6 +114,11 @@ class ServiceUtils {
         logger.error(`[CACHE] Failed to fetch from cache: ${fetchUrl}`, err);
       }
     }
+    headers = {
+      // Cookie: actionObject.requestDetails.cookies || '',
+      'x-api-key': env.API_SECRET_KEY || 'Yr2636E6BTD3UCdleMkf7UEdqKnd9n361TQL9An7',
+      // ...actionObject.requestDetails.whitelistedHeaders,
+    };
 
     // Request options in axios format
     const reqOptions = {

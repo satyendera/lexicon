@@ -214,3 +214,38 @@ export const getIsProd = () => {
   }
   return 'dev';
 };
+
+// this utility to route application to different page 
+export const urlNavigator = (
+  url,
+  router,
+  additionalParam = {},
+  noStackInBrowserHistory = false
+) => {
+  let resolver = '';
+  let queryParams = {};
+
+  const urlWithoutHash = url && url.split('#')[0]; // Strip # value else it will break in getClientRouterInfo()
+  if (isRouteAvailable(urlWithoutHash)) {
+    resolver = urlWithoutHash;
+  } else {
+    const hrefUrl = getClientRouterInfo(urlWithoutHash);
+    if (hrefUrl?.resolver) {
+      resolver = hrefUrl?.resolver;
+      queryParams = hrefUrl?.parameter;
+    }
+  }
+
+  const returnedParameter = { ...queryParams, ...additionalParam };
+  const routingData = {
+    pathname: resolver,
+    query: returnedParameter,
+    ...(url === '/' ? {} : { as: url }),
+  };
+  if (noStackInBrowserHistory) {
+    router.replace(routingData, url);
+  } else {
+    router.push(routingData, url);
+  }
+  return null;
+};

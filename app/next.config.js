@@ -147,6 +147,7 @@ module.exports = withPlugins([withBundleAnalyzer, withOffline], {
     metricsKey,
     isCachingEnabled: process.env.CACHE_ENABLED !== 'false',
     isProd: process.env.PROD_ENV === 'true',
+    env:envVars
   },
   workboxOpts: {
     clientsClaim: true,

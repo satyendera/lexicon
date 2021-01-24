@@ -5,6 +5,7 @@ import Layout from '../../templates/Layout';
 import API from '../../../utils/fetch';
 import API_URLS from '../../../constants/api/services';
 import experienceComponentMap from '../../../utils/componentMap';
+import TopBanner from '../../molecules/TopBanner';
 
 const Experience = ({ identifier = 'home' }) => {
   const [isFetching, updateIsFetching] = useState(false);
@@ -36,6 +37,7 @@ const Experience = ({ identifier = 'home' }) => {
 
   return (
     <Layout title="error" className="row" id="content-wrapper" tabindex="-1">
+      <TopBanner title="Universal React" subTitle="movieDetails"  />
       {getElements()}
     </Layout>
   );
