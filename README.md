@@ -36,3 +36,25 @@ yern dev - it will be a dev build
 ## How to ramp-up?
 
 Follow this ramp-up [guide](readme/01-GettingStarted.md)
+
+## Trade offs
+No Partial Rendering 
+Less scope for Micorfrontend 
+Less Scope for joining multiapps i.e. Lerna
+entire Store is visible at client side
+
+
+
+## Assumptions
+it's Headless, standalone  Solution which can use any Back end system with or without API gateway through REST API's.
+we need SSR (SEO compitable) and SSG (Static site generation) feature with best TTFB, TTI rate.
+node version should be > 10.30 and React version should be >16.0
+Streaming providers could be configurable 
+By this practice test , you would like to know knowledge about tech stack , not assuming fully functional prototype
+If ask is not properly working or implemented , team will ask for best solution and how could we achieve same by this architecture.
+Use of this framework is just to ease development and  save time in installing things , i am handy for new setup as well.
+Sitespeed , Sonar and jest setup are not part of ask.
+
+
+
+
