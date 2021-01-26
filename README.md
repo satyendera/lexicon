@@ -46,14 +46,14 @@ entire Store is visible at client side
 
 
 ## Assumptions
-it's Headless, standalone  Solution which can use any Back end system with or without API gateway through REST API's.
-we need SSR (SEO compitable) and SSG (Static site generation) feature with best TTFB, TTI rate.
-node version should be > 10.30 and React version should be >16.0
-Streaming providers could be configurable 
-By this practice test , you would like to know knowledge about tech stack , not assuming fully functional prototype
-If ask is not properly working or implemented , team will ask for best solution and how could we achieve same by this architecture.
-Use of this framework is just to ease development and  save time in installing things , i am handy for new setup as well.
-Sitespeed , Sonar and jest setup are not part of ask.
+1. it's Headless, standalone  Solution which can use any Back end system with or without API gateway through REST API's.
+2. We need SSR (SEO compitable) and SSG (Static site generation) feature with best TTFB, TTI rate.
+3. node version should be > 10.30 and React version should be >16.0
+4. Streaming providers could be configurable 
+5. By this practice test , you would like to know knowledge about tech stack , not assuming fully functional prototype
+6. If ask is not properly working or implemented , team will ask for best solution and how could we achieve same by this architecture.
+7. Use of this framework is just to ease development and  save time in installing things , i am handy for new setup as well.
+8. Sitespeed , Sonar and jest setup are not part of ask.
 
 
 
